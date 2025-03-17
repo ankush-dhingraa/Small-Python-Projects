@@ -17,6 +17,7 @@ while not game_over:
     for letter in chosen_word:
         if letter == guess:
             display += letter
+            correct_letter.append(letter)
         elif letter in correct_letter:
             display += letter
         else:
@@ -26,10 +27,11 @@ while not game_over:
 
     if guess not in chosen_word:
         print(f"{guess} is not in the word to guess :( You lose a live")
-        live -= 1
+        lives -= 1
         if lives == 0:
             game_over = True 
             print(f"***********************IT WAS {chosen_word}! YOU LOSE**********************")
     if display == chosen_word:
         game_over = True
         print("***********************YOU WIN**********************")
+    print(stages[lives])
