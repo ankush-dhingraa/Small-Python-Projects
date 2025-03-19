@@ -8,4 +8,20 @@ while not program_over:
     name = input("Please enter your name: ")
     amount = int(input("Enter your bid amount : ₹"))
     auction_bid[name] = amount
+    choice = input("Are there any other bidders? Reply with 'yes' or 'no' : ").lower()
+    if choice == "yes":
+        print("\n"*15)
+    elif choice == "no":
+        highest_bider_name =""
+        highest_bid = 0
+        for key in auction_bid:
+            value = auction_bid[key]
+            if highest_bid < value:
+                highest_bider_name = key
+                highest_bid = value
+        program_over = True
+        print("\n***********************[ START ]***********************")
+
+        print(f"The winner is {highest_bider_name} with a bid of ₹{highest_bid}")
+
     
