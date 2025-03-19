@@ -19,9 +19,12 @@ while not program_over:
             if highest_bid < value:
                 highest_bider_name = key
                 highest_bid = value
+        print(f"\n\nThe winner is {highest_bider_name} with a bid of ₹{highest_bid}")                
         program_over = True
-        print("\n***********************[ START ]***********************")
+        print("\n***********************[ EXIT ]***********************")
+    else:
+        print("\n Wrong choice :( ")
 
-        print(f"The winner is {highest_bider_name} with a bid of ₹{highest_bid}")
+
 
     
