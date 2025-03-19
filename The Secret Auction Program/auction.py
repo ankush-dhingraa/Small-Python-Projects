@@ -10,7 +10,7 @@ while not program_over:
     auction_bid[name] = amount
     choice = input("Are there any other bidders? Reply with 'yes' or 'no' : ").lower()
     if choice == "yes":
-        print("\n"*15)
+        print("\n"*50)
     elif choice == "no":
         highest_bider_name =""
         highest_bid = 0
@@ -24,6 +24,7 @@ while not program_over:
         print("\n***********************[ EXIT ]***********************")
     else:
         print("\n Wrong choice :( ")
+        print("\n"*50)
 
 
 
