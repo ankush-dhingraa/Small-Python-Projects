@@ -23,7 +23,13 @@ operations = {
 
 calculation = False
 while not calculation:
-    first = int(input("What's the first number?"))
+    previous
+    first = float(input("What's the first number?"))
     print('+\n-\n*\n/\n')
-    operator = input("Pick an operation:")
+    operator = input("Pick an operation: ")
+    second = float(input("What's the next number?"))
+    result = operations[operator](first,second)
+    print(f"{first} {operator} {second} = {result}")
+    choice = input(f"Type 'y' to continue calculating with {result},\n or type 'n' to start a new calculation or 'exit' to exit: ").lower()
+    if c
 
