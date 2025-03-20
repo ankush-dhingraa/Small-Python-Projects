@@ -21,15 +21,27 @@ operations = {
     "/" : divide
 }
 
-calculation = False
-while not calculation:
-    previous
-    first = float(input("What's the first number?"))
+calculation_over = False
+previous_result = False
+while not calculation_over:
+    if not previous_result:
+        first = float(input("What's the first number?"))
+    else:
+        first = result
     print('+\n-\n*\n/\n')
     operator = input("Pick an operation: ")
     second = float(input("What's the next number?"))
     result = operations[operator](first,second)
     print(f"{first} {operator} {second} = {result}")
     choice = input(f"Type 'y' to continue calculating with {result},\n or type 'n' to start a new calculation or 'exit' to exit: ").lower()
-    if c
-
+    if choice == "y":
+        previous_result = True
+    elif choice == "n":
+        print("\n"*50)
+    elif choice == "exit":
+        print("Good bye! :)")
+        print("*******************************[ EXIT ]*******************************")
+        calculation_over = True
+    else:
+        print("Wrong choice.....starting a new calculation")
+        print("\n"*50)
