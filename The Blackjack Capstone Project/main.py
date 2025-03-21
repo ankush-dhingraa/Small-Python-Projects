@@ -6,6 +6,8 @@ user_cards = []
 computer_cards = []
 should_play = True
 taking_card = True
+win = False
+draw = False
 #for user 
 def give_cards_to_user(num = 1):
     for i in range(num):
@@ -20,6 +22,9 @@ def info_print():
     
 def check_status():
     if sum(user_cards) == 21:
+        return True
+    elif sum(user_cards)>21:
+        return False
 
     
 
@@ -37,8 +42,34 @@ while should_play:
             user_input = input("Type 'Hit' to get another card, type 'stand' to pass: ").lower()
             if user_input == "hit":
                 give_cards_to_user()
+                if check_status:
+                    win = True
             else:
                 taking_card = False
+        if not win:
+            while sum(computer_cards) <= 17:
+                give_cards_to_computer()
+        if sum(computer_cards) >=21:
+            win = True
+        elif sum(computer_cards) < sum(user_cards):
+            win = True
+        elif sum(computer_cards) == sum(user_cards):
+            draw = True
+        else:
+            win = False
+
+        if win:
+            if draw:
+                info_print()
+                print("Match draw :----")
+            else:
+                if sum(user_cards) == 21:
+                    info_print()
+                    print("\nWin with a Blackjack 😎\n")
+                else:
+                    print()
+
+
 
         check_status()
     else:
