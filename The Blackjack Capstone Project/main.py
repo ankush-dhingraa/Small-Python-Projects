@@ -18,10 +18,10 @@ def give_cards_to_computer(num = 1):
         computer_cards.append(random.choice(cards))
 
 def info_print(num = 1):
-    if num:
+    if num == 1:
         print(f"Your cards: {user_cards}, current score: {sum(user_cards)}\nComputer's first card: {computer_cards}")
-
-    print(f"Your cards: {user_cards}, current score: {sum(user_cards)}\nComputer's first card: {computer_cards}")
+    else:
+        print(f"Your final hand: {user_cards}, final score: {sum(user_cards)}\nComputer's final hand: {computer_cards}, final score: {sum(computer_cards)}")
     
 def check_status():
     if sum(user_cards) == 21:
@@ -63,21 +63,19 @@ while should_play:
 
         if win:
             if draw:
-                info_print()
+                info_print(0)
                 print("Match draw :----")
             else:
                 if sum(user_cards) == 21:
-                    info_print()
+                    info_print(0)
                     print("\nWin with a Blackjack 😎\n")
                 else:
-                    info_print()
+                    info_print(0)
                     print("Opponent went over. You win 😁")
         else:
-            info_print()
+            info_print(0)
             print("You lose 😤")
-
-
-
-        check_status()
     else:
         should_play = False
+        print("Good bye :)-")
+        print()
