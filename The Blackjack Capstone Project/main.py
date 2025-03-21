@@ -20,9 +20,9 @@ def give_cards_to_computer(num = 1):
 
 def info_print(num = 1):
     if num == 1:
-        print(f"Your cards: {user_cards}, current score: {sum(user_cards)}\nComputer's first card: {computer_cards}")
+        print(f"\n\nYour cards: {user_cards}, current score: {sum(user_cards)}\nComputer's first card: {computer_cards}\n")
     else:
-        print(f"Your final hand: {user_cards}, final score: {sum(user_cards)}\nComputer's final hand: {computer_cards}, final score: {sum(computer_cards)}")
+        print(f"\n\nYour final hand: {user_cards}, final score: {sum(user_cards)}\nComputer's final hand: {computer_cards}, final score: {sum(computer_cards)}\n")
     
 def check_status():
     if sum(user_cards) == 21:
@@ -39,15 +39,19 @@ while should_play:
     choice_for_play = input("\n\nDo you want to play a game of Blackjack? Type 'y' or 'n': ").lower()
     if choice_for_play == "y":
         give_cards_to_user(2)
+        if check_status():
+            win = True
+            taking_card =False
         give_cards_to_computer()
         info_print()
-        check_status()
         while taking_card:
             user_input = input("\n\nType 'y' (HIT) to get another card, type 'n' (STAND) to pass : ").lower()
             if user_input == "y":
                 give_cards_to_user()
-                if check_status:
+                info_print()
+                if check_status():
                     win = True
+                    taking_card = False
             else:
                 taking_card = False
         if not win:
@@ -78,6 +82,10 @@ while should_play:
             print("You lose 😤")
         user_cards.clear()
         computer_cards.clear()
+        should_play = True
+        taking_card = True
+        win = False
+        draw = False
     else:
         should_play = False
         print("Good bye :)-")
