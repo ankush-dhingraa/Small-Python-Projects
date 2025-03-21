@@ -36,15 +36,15 @@ def check_status():
 
 
 while should_play:
-    choice_for_play = input("Do you want to play a game of Blackjack? Type 'y' or 'n': ").lower()
+    choice_for_play = input("\n\nDo you want to play a game of Blackjack? Type 'y' or 'n': ").lower()
     if choice_for_play == "y":
         give_cards_to_user(2)
         give_cards_to_computer()
         info_print()
         check_status()
         while taking_card:
-            user_input = input("Type 'Hit' to get another card, type 'stand' to pass: ").lower()
-            if user_input == "hit":
+            user_input = input("\n\nType 'y' (HIT) to get another card, type 'n' (STAND) to pass : ").lower()
+            if user_input == "y":
                 give_cards_to_user()
                 if check_status:
                     win = True
