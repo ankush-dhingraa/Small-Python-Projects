@@ -17,7 +17,10 @@ def give_cards_to_computer(num = 1):
     for i in range(num):
         computer_cards.append(random.choice(cards))
 
-def info_print():
+def info_print(num = 1):
+    if num:
+        print(f"Your cards: {user_cards}, current score: {sum(user_cards)}\nComputer's first card: {computer_cards}")
+
     print(f"Your cards: {user_cards}, current score: {sum(user_cards)}\nComputer's first card: {computer_cards}")
     
 def check_status():
