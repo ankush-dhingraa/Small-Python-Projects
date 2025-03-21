@@ -67,7 +67,11 @@ while should_play:
                     info_print()
                     print("\nWin with a Blackjack 😎\n")
                 else:
-                    print()
+                    info_print()
+                    print("Opponent went over. You win 😁")
+        else:
+            info_print()
+            print("You lose 😤")
 
 
 
