@@ -76,6 +76,8 @@ while should_play:
         else:
             info_print(0)
             print("You lose 😤")
+        user_cards.clear()
+        computer_cards.clear()
     else:
         should_play = False
         print("Good bye :)-")
