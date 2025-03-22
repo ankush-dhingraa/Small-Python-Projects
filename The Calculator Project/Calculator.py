@@ -28,7 +28,9 @@ while not calculation_over:
         first = float(input("What's the first number?"))
     else:
         first = result
-    print('+\n-\n*\n/\n')
+    # print('+\n-\n*\n/\n')
+    for operator in operations:
+        print(operator)
     operator = input("Pick an operation: ")
     second = float(input("What's the next number?"))
     result = operations[operator](first,second)
