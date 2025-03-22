@@ -42,7 +42,7 @@ while not calculation_over:
     elif choice == "n":
         print("\n"*50)
     elif choice == "exit":
-        print("Good bye! :)")
+        print("\n\nGood bye! :)")
         print("*******************************[ EXIT ]******************************")
         calculation_over = True
     else:
