@@ -31,6 +31,7 @@ while not calculation_over:
     # print('+\n-\n*\n/\n')
     for operator in operations:
         print(operator)
+    print("\n\n")
     operator = input("Pick an operation: ")
     second = float(input("What's the next number?"))
     result = operations[operator](first,second)
