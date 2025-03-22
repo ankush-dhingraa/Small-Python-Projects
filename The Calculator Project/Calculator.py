@@ -46,5 +46,5 @@ while not calculation_over:
         print("*******************************[ EXIT ]******************************")
         calculation_over = True
     else:
-        print("Wrong choice.....starting a new calculation :-")
+        print("\nWrong choice.....starting a new calculation :-")
         print("\n"*50)
