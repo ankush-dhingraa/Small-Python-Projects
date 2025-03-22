@@ -1,4 +1,5 @@
 from logo import logo
+#display the ASCII ART
 print(logo)
 print("*******************************[ START ]******************************")
 #creating a functions for calculation 
