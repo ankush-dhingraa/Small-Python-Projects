@@ -1,6 +1,6 @@
 from logo import logo
 print(logo)
-print("*******************************[ START ]*******************************")
+print("*******************************[ START ]******************************")
 #creating a functions for calculation 
 def add(n1, n2):
     return n1 + n2
