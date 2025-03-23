@@ -4,7 +4,20 @@ game_over = False
 lives = 0
 # number between 1 to 100
 number_to_guess = random.randint(1,100)
-def check():
+def check(guess):
+    global lives
+    if guess == number_to_guess:
+        lives = 0
+    else:
+        if guess > number_to_guess:
+            print("Too High :-")
+            print("Guess again.")
+        else:
+            print("Too Low :-")
+            print("Guess again.")
+        lives -=1
+        
+
 
 while not game_over:
     print(logo)
