@@ -2,12 +2,15 @@ import random
 from ascii_art import logo,winner
 game_over = False
 lives = 0
+win = False
 # number between 1 to 100
 number_to_guess = random.randint(1,100)
 def check(guess):
     global lives
     if guess == number_to_guess:
         lives = 0
+        global win
+        win = True
     else:
         if guess > number_to_guess:
             print("Too High :-")
@@ -37,7 +40,7 @@ while not game_over:
     while lives >0:
         guess = int(input("Make a guess: "))
         check(guess)
-    if lives >= 1:
+    if win:
         print(f"You got it! The answer was {number_to_guess}")
         winner()
     else:
