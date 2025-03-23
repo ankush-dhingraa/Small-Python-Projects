@@ -20,15 +20,12 @@ def check(guess):
             print("Guess again.")
         lives -=1
         print(f"You have {lives} attempts remaining to guess the number.")
-        
-
-
+      
 while not game_over:
     print(logo)
     print("*********************************[ START ]*********************************")
     print("Welcome to the Guess the Number Game!")
     print("I'm thinking of a number between 1 and 100.")
-    print(number_to_guess)
     level = input("Select a difficulty level: Type 'easy' or 'hard' : ")
     if level == "easy":
         lives = 10
@@ -45,6 +42,7 @@ while not game_over:
         winner()
     else:
         print("You've run out of guesses.")
-        print("You loss dear......")
+        print("You loss dear :(")
+    print("*********************************[ EXIT ]*********************************")
     game_over = True
         
