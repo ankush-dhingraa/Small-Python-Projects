@@ -1,6 +1,9 @@
+import random
 from ascii_art import logo,winner
 game_over = False
 lives = 0
+# number between 1 to 100
+number_to_guess = random.randint(1,100)
 def check():
 
 while not game_over:
@@ -15,5 +18,6 @@ while not game_over:
         lives = 5
     
     while lives >0:
-        guess = int(input)
+        guess = int(input("Make a guess: "))
+        check(guess)
         
