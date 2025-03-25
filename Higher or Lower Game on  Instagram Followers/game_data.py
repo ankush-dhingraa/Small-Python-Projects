@@ -1,17 +1,4 @@
 #data list contain instagram account details
-data = [{
-    "name":"instagram",
-    "follower_count":400,
-    "description":"official account",
-    "country":"USA"
-        },
-        {
-    "name":"instagram",
-    "follower_count":400,
-    "description":"official account",
-    "country":"USA"
-        }]
-
 data = [
     {
         "name": "Virat Kohli",
@@ -233,5 +220,128 @@ data = [
         "name": "Lionel Messi",
         "follower_count": 220,
         "description": "Footballer",
-        "country": "Argentina"}]
+        "country": "Argentina"
+    },
+    {
+        "name": "Cristiano Ronaldo",
+        "follower_count": 615,
+        "description": "Footballer",
+        "country": "Portugal"
+    },
+    {
+        "name": "MrBeast",
+        "follower_count": 225,
+        "description": "YouTuber and philanthropist",
+        "country": "USA"
+    },
+    {
+        "name": "Billie Eilish",
+        "follower_count": 115,
+        "description": "Singer-songwriter",
+        "country": "USA"
+    },
+    {
+        "name": "Zendaya",
+        "follower_count": 185,
+        "description": "Actress and singer",
+        "country": "USA"
+    },
+    {
+        "name": "Gigi Hadid",
+        "follower_count": 90,
+        "description": "Model",
+        "country": "USA"
+    },
+    {
+        "name": "Shawn Mendes",
+        "follower_count": 80,
+        "description": "Singer",
+        "country": "Canada"
+    },
+    {
+        "name": "Kourtney Kardashian",
+        "follower_count": 225,
+        "description": "Media personality",
+        "country": "USA"
+    },
+    {
+        "name": "David Beckham",
+        "follower_count": 88,
+        "description": "Former footballer",
+        "country": "UK"
+    },
+    {
+        "name": "Zayn Malik",
+        "follower_count": 50,
+        "description": "Singer and former One Direction member",
+        "country": "UK"
+    },
+    {
+        "name": "Robert Downey Jr.",
+        "follower_count": 58,
+        "description": "Actor (Iron Man)",
+        "country": "USA"
+    },
+    {
+        "name": "Chris Hemsworth",
+        "follower_count": 60,
+        "description": "Actor (Thor)",
+        "country": "Australia"
+    },
+    {
+        "name": "Emma Watson",
+        "follower_count": 75,
+        "description": "Actress (Harry Potter)",
+        "country": "UK"
+    },
+    {
+        "name": "Will Smith",
+        "follower_count": 77,
+        "description": "Actor and rapper",
+        "country": "USA"
+    },
+    {
+        "name": "Jennifer Lopez",
+        "follower_count": 245,
+        "description": "Singer and actress",
+        "country": "USA"
+    },
+    {
+        "name": "Eminem",
+        "follower_count": 42,
+        "description": "Rapper",
+        "country": "USA"
+    },
+    {
+        "name": "Dua Lipa",
+        "follower_count": 88,
+        "description": "Singer-songwriter",
+        "country": "UK"
+    },
+    {
+        "name": "BLACKPINK",
+        "follower_count": 95,
+        "description": "K-Pop girl group",
+        "country": "South Korea"
+    },
+    {
+        "name": "Jungkook (BTS)",
+        "follower_count": 90,
+        "description": "Singer and member of BTS",
+        "country": "South Korea"
+    },
+    {
+        "name": "Mark Zuckerberg",
+        "follower_count": 15,
+        "description": "Facebook CEO",
+        "country": "USA"
+    },
+    {
+        "name": "Elon Musk",
+        "follower_count": 45,
+        "description": "Entrepreneur (Tesla, SpaceX)",
+        "country": "USA"
+    }
+]
+
  
