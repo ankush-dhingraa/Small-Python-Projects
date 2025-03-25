@@ -4,6 +4,12 @@ from ascii_art import logo,vs
 from game_data import data
 data_a = {}
 data_b = {}
+score = 0
+def display(item):
+    account_name = item["name"]
+    account_descr = item["description"]
+    account_country = item["country"]
+    print(f"{account_name}, a {account_descr}, from {account_country}")
 def data_to_compare():
     global data_a,data_b
     data_a = random.choice(data)
@@ -14,4 +20,5 @@ def data_to_compare():
             data_b = temp
             flag = False
 data_to_compare()
-print(data_a,"\n",data_b)
+display(data_a)
+display(data_b)
