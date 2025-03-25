@@ -5,6 +5,7 @@ from game_data import data
 data_a = {}
 data_b = {}
 score = 0
+game_over = False
 def compare(data_a,data_b,choice):
     global score
     if data_a["follower_count"] > data_b["follower_count"]:
@@ -35,10 +36,6 @@ def initialize_data():
         if data_a != temp:
             data_b = temp
             flag = False
-initialize_data()
-display(data_a)
-display(data_b)
-game_over = False
 while game_over:
     print(logo,"\n")
     initialize_data()
