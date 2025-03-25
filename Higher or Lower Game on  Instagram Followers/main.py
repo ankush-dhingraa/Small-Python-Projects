@@ -36,7 +36,7 @@ def initialize_data():
         if data_a != temp:
             data_b = temp
             flag = False
-while game_over:
+while not game_over:
     print(logo,"\n")
     initialize_data()
     display(data_a,"a")
