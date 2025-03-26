@@ -30,7 +30,7 @@ while not game_over:
         lives -= 1
         if lives == 0:
             game_over = True 
-            print(f"***********************IT WAS {chosen_word}! YOU LOSE**********************")
+            print(f"***********************IT WAS {chosen_word}! YOU LOSE***********************")
     if display == chosen_word:
         game_over = True
         print("***********************YOU WIN***********************")
