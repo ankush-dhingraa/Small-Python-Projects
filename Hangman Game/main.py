@@ -26,7 +26,7 @@ while not game_over:
     print(f"Word to guess : {display}")
 
     if guess not in chosen_word:
-        print(f"{guess} is not in the word to guess :( You lose a live")
+        print(f"{guess} is not in the word to guess :-( You lose a live")
         lives -= 1
         if lives == 0:
             game_over = True 
