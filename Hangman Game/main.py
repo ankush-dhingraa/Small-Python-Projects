@@ -9,7 +9,7 @@ lives = 6
 game_over = False
 correct_letter = []
 while not game_over:
-    print(f"****************************{lives}/6 LIVES LEFT*****************************")
+    print(f"****************************[ {lives}/6 LIVES LEFT ]*****************************")
     guess = input("Guess a letter: ").lower()
     display = ""
     if guess in correct_letter:
