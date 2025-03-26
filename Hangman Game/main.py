@@ -33,5 +33,5 @@ while not game_over:
             print(f"***********************IT WAS {chosen_word}! YOU LOSE**********************")
     if display == chosen_word:
         game_over = True
-        print("***********************YOU WIN**********************")
+        print("***********************YOU WIN***********************")
     print(stages[lives])
