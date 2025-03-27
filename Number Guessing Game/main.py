@@ -43,6 +43,6 @@ while not game_over:
     else:
         print("You've run out of guesses.")
         print("You loss dear :(")
-    print("*********************************[ EXIT ]*********************************")
+    print("**********************************[ EXIT ]**********************************")
     game_over = True
         
