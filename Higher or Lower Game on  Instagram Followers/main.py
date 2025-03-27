@@ -42,7 +42,7 @@ while not game_over:
     display(data_a,"a")
     print(vs)
     display(data_b,"b")
-    answer = input("Who has more followers? Type 'A' or 'B': ").lower()
+    answer = input("Who has more followers? Type 'A' or 'B' : ").lower()
     if compare(data_a,data_b,answer):
         print("\n"*50)
         print(f"You're right! :-) Current score: {score}.")
