@@ -38,7 +38,7 @@ while not game_over:
         guess = int(input("Make a guess: "))
         check(guess)
     if win:
-        print(f"You got it! The answer was {number_to_guess}")
+        print(f"You got it in {lives} lives! The answer was {number_to_guess}")
         winner()
     else:
         print("You've run out of guesses.")
