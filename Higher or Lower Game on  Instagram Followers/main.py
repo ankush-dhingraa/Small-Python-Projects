@@ -45,7 +45,7 @@ while not game_over:
     answer = input("Who has more followers? Type 'A' or 'B': ").lower()
     if compare(data_a,data_b,answer):
         print("\n"*50)
-        print(f"You're right! Current score: {score}.")
+        print(f"You're right! : Current score: {score}.")
     else:
         print(f"Sorry, that's wrong :-(, Final score: {score}")
         game_over = True
