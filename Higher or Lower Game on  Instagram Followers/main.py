@@ -47,6 +47,6 @@ while not game_over:
         print("\n"*50)
         print(f"You're right! Current score: {score}.")
     else:
-        print(f"Sorry, that's wrong :. Final score: {score}")
+        print(f"Sorry, that's wrong :-. Final score: {score}")
         game_over = True
 
