@@ -22,18 +22,30 @@ MENU = {
 resource = {
     "water" : 800,
     "milk" : 450,
-    "coffee" : 185
+    "coffee" : 185,
+    "money" : 0
 }
-print(MENU["Indian Espresso"]["ingredients"])
-
-for keys in MENU:
-    print(keys," : ")
-    for i in MENU[keys]:
-        if i == "ingredients":
-            for j in MENU[keys][i]:
-                print(j," : ",MENU[keys][i][j])
+#report function for display the resources and money
+def report():
+    print("#"*23)
+    print("current resource values".title())
+    print("#"*23,"\n")
+    for keys in resource:
+        if keys == "money":
+            print(keys," : ₹",resource[keys])
         else:
-            print(i," : ",MENU[keys][i])
-    print("\n")
+            print(keys," : ",resource[keys])
+report()
+# print(MENU["Indian Espresso"]["ingredients"])
+
+# for keys in MENU:
+#     print(keys," : ")
+#     for i in MENU[keys]:
+#         if i == "ingredients":
+#             for j in MENU[keys][i]:
+#                 print(j," : ",MENU[keys][i][j])
+#         else:
+#             print(i," : ",MENU[keys][i])
+#     print("\n")
         
 
