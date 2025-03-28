@@ -1,3 +1,4 @@
+from money import ruppe_structure,ruppe_dict
 MENU = {
     "Indian Espresso" : {"ingredients" : {
         "water" : 50,
@@ -55,16 +56,16 @@ def check_resources(menu_item):
     return available
 #collect_money fuunction collect the money from user
 def collect_money(item_cost):
-    print('''
-0 for ₹1 coin
-1 for ₹2 coin
-2 for ₹5 coin
-3 for ₹10 Note
-4 for ₹20 Note
-5 for ₹50 Note
-6 for ₹100 Note
-7 for ₹200 Note
-8 for ₹500 Note''')
+    money_collect = False
+    total_money = 0
+    print(ruppe_structure)
+    while not money_collect:
+        user_input = int(input("Enter money coins or notes : "))
+        if item_cost > total_money:
+            print(f"{total_money} out of {item_cost}, {item_cost-total_money} is still pending Enter more Ruppe :(")
+        elif item_cost < total_money:
+            
+
 
 
 check_resources("Hyderabadi Irani Coffee")
