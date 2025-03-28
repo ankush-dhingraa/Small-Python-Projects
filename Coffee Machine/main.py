@@ -35,7 +35,10 @@ def report():
             print(keys," : ₹",resource[keys])
         else:
             print(keys," : ",resource[keys])
-report()
+def check_resources(menu_item):
+    for keys in MENU:
+        if menu_item == keys:
+            
 # print(MENU["Indian Espresso"]["ingredients"])
 
 # for keys in MENU:
