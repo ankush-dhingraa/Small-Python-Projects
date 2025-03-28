@@ -18,6 +18,12 @@ MENU = {
     },
     "cost" : 90}
 }
+
+resource = {
+    "water" : 800,
+    "milk" : 450,
+    "coffee" : 185
+}
 print(MENU["Indian Espresso"]["ingredients"])
 
 for keys in MENU:
