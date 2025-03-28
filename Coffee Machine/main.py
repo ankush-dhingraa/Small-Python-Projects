@@ -1,18 +1,18 @@
 MENU = {
     "Indian Espresso" : {"ingredients" : {
-        "Water" : 50,
+        "water" : 50,
         "milk" : 0,
         "coffee" : 30,
     },
     "cost" : 60},
     "Kumbakonam Degree Coffee" : {"ingredients" : {
-        "Water" : 120,
+        "water" : 120,
         "milk" : 80,
         "coffee" : 50,
     },
     "cost" : 100},
     "Hyderabadi Irani Coffee" : {"ingredients" : {
-        "Water" : 80,
+        "water" : 80,
         "milk" : 100,
         "coffee" : 40,
     },
@@ -20,9 +20,9 @@ MENU = {
 }
 
 resource = {
-    "water" : 800,
+    "water" : 10,
     "milk" : 450,
-    "coffee" : 185,
+    "coffee" : 10,
     "money" : 0
 }
 #report function for display the resources and money
@@ -35,6 +35,7 @@ def report():
             print(keys," : ₹",resource[keys])
         else:
             print(keys," : ",resource[keys])
+#check_resources function check resource and display the ingredients if not available
 def check_resources(menu_item):
     available = True
     not_available_list = []
@@ -49,9 +50,21 @@ def check_resources(menu_item):
     if not available:
         print("Sorry there is not enough ",end="")
         for i in not_available_list:
-            print(",",not_available_list[i])
+            print(",",i,end="")
+        print("\n")
     return available
-
+#collect_money fuunction collect the money from user
+def collect_money(item_cost):
+    print('''
+0 for ₹1 coin
+1 for ₹2 coin
+2 for ₹5 coin
+3 for ₹10 Note
+4 for ₹20 Note
+5 for ₹50 Note
+6 for ₹100 Note
+7 for ₹200 Note
+8 for ₹500 Note''')
 
 
 check_resources("Hyderabadi Irani Coffee")
