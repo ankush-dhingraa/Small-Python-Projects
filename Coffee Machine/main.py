@@ -38,7 +38,16 @@ def report():
 def check_resources(menu_item):
     for keys in MENU:
         if menu_item == keys:
-            
+            for i in MENU[keys]:
+                if i == "ingredients":
+                    for j in MENU[keys][i]:
+                        print(j)
+
+
+                        
+check_resources("Hyderabadi Irani Coffee")
+
+
 # print(MENU["Indian Espresso"]["ingredients"])
 
 # for keys in MENU:
