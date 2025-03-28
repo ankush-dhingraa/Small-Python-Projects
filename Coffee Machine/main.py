@@ -36,15 +36,24 @@ def report():
         else:
             print(keys," : ",resource[keys])
 def check_resources(menu_item):
+    available = True
+    not_available_list = []
     for keys in MENU:
         if menu_item == keys:
             for i in MENU[keys]:
                 if i == "ingredients":
                     for j in MENU[keys][i]:
-                        print(j)
+                        if MENU[keys][i][j] > resource[j]:
+                            available = False
+                            not_available_list.append(j)
+    if not available:
+        print("Sorry there is not enough ",end="")
+        for i in not_available_list:
+            print(",",not_available_list[i])
+    return available
 
 
-                        
+
 check_resources("Hyderabadi Irani Coffee")
 
 
