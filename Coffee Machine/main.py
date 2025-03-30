@@ -92,25 +92,7 @@ def collect_money(item_cost):
     if money_collect == True:
         resource["money"] += item_cost
 
-
-# print("stil live")
-# check_resources("Kumbakonam Degree Coffee")
-
-
-# print(MENU["Indian Espresso"]["ingredients"])
-
-# for keys in MENU:
-#     print(keys," : ")
-#     for i in MENU[keys]:
-#         if i == "ingredients":
-#             for j in MENU[keys][i]:
-#                 print(j," : ",MENU[keys][i][j])
-#         else:
-#             print(i," : ",MENU[keys][i])
-#     print("\n")
-# display_menu()
 buy_coffee = True
-# print("Kumbakonam Degree Coffee" in MENU.keys())
 while buy_coffee:
     display_menu()
     user_want = input("Enter the name of coffee you want to have : ").title()
@@ -127,7 +109,6 @@ while buy_coffee:
             print("Sorry :(")
     else:
         print("Enter wrong instruction or item name :(")
-    # print("\n"*25)
     
 
 
