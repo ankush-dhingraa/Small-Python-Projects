@@ -26,6 +26,11 @@ resource = {
     "coffee" : 10,
     "money" : 0
 }
+#disply_menu() for display the menu to user
+def display_menu():
+    for keys in MENU:
+        print(keys, " : ₹",MENU[keys]["cost"])
+
 #report function for display the resources and money
 def report():
     print("#"*23)
@@ -90,5 +95,11 @@ check_resources("Kumbakonam Degree Coffee")
 #         else:
 #             print(i," : ",MENU[keys][i])
 #     print("\n")
+# display_menu()
+buy_coffee = True
+while buy_coffee:
+    pass
+
+
         
 
