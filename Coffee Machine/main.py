@@ -28,6 +28,7 @@ resource = {
 }
 #disply_menu() for display the menu to user
 def display_menu():
+    print("ITEM NAME     :      COST\n")
     for keys in MENU:
         print(keys, " : ₹",MENU[keys]["cost"])
 
@@ -80,7 +81,7 @@ def collect_money(item_cost):
         resource["money"] += total_money
 
 
-
+print("stil live")
 check_resources("Kumbakonam Degree Coffee")
 
 
@@ -95,10 +96,18 @@ check_resources("Kumbakonam Degree Coffee")
 #         else:
 #             print(i," : ",MENU[keys][i])
 #     print("\n")
-# display_menu()
+display_menu()
 buy_coffee = True
+# print("Kumbakonam Degree Coffee" in MENU.keys())
 while buy_coffee:
-    pass
+    user_want = input("Enter the name of coffee you want to have : ").lower()
+    if user_want == "off":
+        buy_coffee = False
+    elif user_want == "report":
+        report()
+    else:
+        print("Enter wrong instruction or item name :(")
+    buy_coffee = False
 
 
         
