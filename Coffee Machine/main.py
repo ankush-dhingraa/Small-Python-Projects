@@ -60,6 +60,12 @@ def check_resources(menu_item):
             print(",",i,end="")
         print("\n")
     return available
+#resources_used() is for to deduct resources
+def resources_used(item_name):
+    global resource
+    for i in MENU[item_name]["ingredients"]:
+        resource[i] -= MENU[item_name]["ingredients"][i]
+
 #collect_money fuunction collect the money from user
 def collect_money(item_cost):
     global resource
@@ -105,9 +111,15 @@ while buy_coffee:
         buy_coffee = False
     elif user_want == "report":
         report()
+    elif user_want in MENU.keys():
+        if check_resources(user_want):
+            resources_used()
+            print(f"Here is your {user_want}☕. Enjoy!")
+        else:
+            print("Sorry :(")
     else:
         print("Enter wrong instruction or item name :(")
-    buy_coffee = False
+    
 
 
         
