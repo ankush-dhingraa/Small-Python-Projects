@@ -21,19 +21,23 @@ MENU = {
 }
 
 resource = {
-    "water" : 190,
-    "milk" : 450,
-    "coffee" : 10,
+    "water" : 1000,
+    "milk" : 620,
+    "coffee" : 256,
     "money" : 0
 }
 #disply_menu() for display the menu to user
 def display_menu():
+    print("\n***************************[ MENU ]***************************")
     print("ITEM NAME     :      COST\n")
     for keys in MENU:
         print(keys, " : ₹",MENU[keys]["cost"])
+    print("\nSpecial Instruction:\n    Off : Turn off the machine.\n    Report: Display the available resources.")
+    print("--------------------------------------------------------------\n")
 
 #report function for display the resources and money
 def report():
+    print("\n**************************[ REPORT ]**************************")
     print("#"*23)
     print("current resource values".title())
     print("#"*23,"\n")
@@ -42,6 +46,7 @@ def report():
             print(keys," : ₹",resource[keys])
         else:
             print(keys," : ",resource[keys])
+    print("---------------------------------------------------------------\n")
 #check_resources function check resource and display the ingredients if not available
 def check_resources(menu_item):
     available = True
@@ -55,10 +60,11 @@ def check_resources(menu_item):
                             available = False
                             not_available_list.append(j)
     if not available:
+        print("\n***********************[ SORRY 🥺🥺🥺 ]***********************")
         print("Sorry there is not enough ",end="")
         for i in not_available_list:
             print(",",i,end="")
-        print("\n")
+        print("--------------------------------------------------------------\n")
     return available
 #resources_used() is for to deduct resources
 def resources_used(item_name):
@@ -84,11 +90,11 @@ def collect_money(item_cost):
             print("Money Collected :-)")
             money_collect = True
     if money_collect == True:
-        resource["money"] += total_money
+        resource["money"] += item_cost
 
 
-print("stil live")
-check_resources("Kumbakonam Degree Coffee")
+# print("stil live")
+# check_resources("Kumbakonam Degree Coffee")
 
 
 # print(MENU["Indian Espresso"]["ingredients"])
@@ -102,23 +108,26 @@ check_resources("Kumbakonam Degree Coffee")
 #         else:
 #             print(i," : ",MENU[keys][i])
 #     print("\n")
-display_menu()
+# display_menu()
 buy_coffee = True
 # print("Kumbakonam Degree Coffee" in MENU.keys())
 while buy_coffee:
-    user_want = input("Enter the name of coffee you want to have : ").lower()
-    if user_want == "off":
+    display_menu()
+    user_want = input("Enter the name of coffee you want to have : ").title()
+    if user_want == "Off":
         buy_coffee = False
-    elif user_want == "report":
+    elif user_want == "Report":
         report()
     elif user_want in MENU.keys():
         if check_resources(user_want):
-            resources_used()
+            collect_money(MENU[user_want]["cost"])
+            resources_used(user_want)
             print(f"Here is your {user_want}☕. Enjoy!")
         else:
             print("Sorry :(")
     else:
         print("Enter wrong instruction or item name :(")
+    # print("\n"*25)
     
 
 
