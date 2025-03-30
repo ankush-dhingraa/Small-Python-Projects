@@ -21,7 +21,7 @@ MENU = {
 }
 
 resource = {
-    "water" : 10,
+    "water" : 190,
     "milk" : 450,
     "coffee" : 10,
     "money" : 0
@@ -56,19 +56,27 @@ def check_resources(menu_item):
     return available
 #collect_money fuunction collect the money from user
 def collect_money(item_cost):
+    global resource
     money_collect = False
     total_money = 0
     print(ruppe_structure)
     while not money_collect:
         user_input = int(input("Enter money coins or notes : "))
+        total_money += ruppe_dict[user_input]
         if item_cost > total_money:
-            print(f"{total_money} out of {item_cost}, {item_cost-total_money} is still pending Enter more Ruppe :(")
+            print(f"₹{total_money} out of ₹{item_cost}, ₹{item_cost-total_money} is still pending Enter more Ruppe :(")
         elif item_cost < total_money:
-            print(f"")
+            print(f"₹{total_money-item_cost} is refunded to you, Money collected :)")
+            money_collect = True
+        elif item_cost == total_money:
+            print("Money Collected :-)")
+            money_collect = True
+    if money_collect == True:
+        resource["money"] += total_money
 
 
 
-check_resources("Hyderabadi Irani Coffee")
+check_resources("Kumbakonam Degree Coffee")
 
 
 # print(MENU["Indian Espresso"]["ingredients"])
