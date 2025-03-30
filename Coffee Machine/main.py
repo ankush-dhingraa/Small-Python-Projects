@@ -64,7 +64,7 @@ def collect_money(item_cost):
         if item_cost > total_money:
             print(f"{total_money} out of {item_cost}, {item_cost-total_money} is still pending Enter more Ruppe :(")
         elif item_cost < total_money:
-            
+            print(f"")
 
 
 
