@@ -1,3 +1,5 @@
+#import turtle module
 from turtle import Turtle, Screen
-andhbhakt = Turtle()
+tom = Turtle()
+
 my_screen = Screen()
