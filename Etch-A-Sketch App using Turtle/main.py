@@ -7,6 +7,6 @@ def move_forward():
 # move_backward() is used for moving turtle forward by 10
 def move_backward():
     obj.backward(10)
-# move_forward() is used for moving turtle forward by 10
+# clockwise() is used for rotating turtle right by 10 degree angle
 def clockwise():
     obj.right(10)
