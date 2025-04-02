@@ -1,7 +1,7 @@
 from turtle import Turtle, Screen
 obj = Turtle()
 screen = Screen()
-
+# move_forward() is used for moving turtle forward by 10
 def move_forward():
     obj.forward(10)
 def move_backward():
