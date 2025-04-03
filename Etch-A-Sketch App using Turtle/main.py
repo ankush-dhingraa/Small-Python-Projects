@@ -16,3 +16,5 @@ def counter_clockwise():
 #clear() is used for Delete the turtle’s drawings from the screen. 
 def clear():
     obj.clear()
+
+screen.listen()
