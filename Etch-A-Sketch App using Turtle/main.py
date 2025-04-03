@@ -19,3 +19,5 @@ def clear():
 
 #Event listner
 screen.listen()
+
+screen.onkey(key="w",fun=move_forwards)
