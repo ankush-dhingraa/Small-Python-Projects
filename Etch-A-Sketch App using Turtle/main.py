@@ -21,8 +21,13 @@ def clear():
 screen.listen()
 #Set 'w' key to call move_forwards function.
 screen.onkey(key="w",fun=move_forwards)
+#Set 's' key to call move_forwards function.
 screen.onkey(key="s",fun=move_backwards)
+#Set 'd' key to call move_forwards function.
 screen.onkey(key="d",fun=clockwise)
+#Set 'a' key to call move_forwards function.
 screen.onkey(key="a",fun=counter_clockwise)
+#Set 'c' key to call move_forwards function.
 screen.onkey(key="c",fun=clear)
+
 screen.exitonclick()
