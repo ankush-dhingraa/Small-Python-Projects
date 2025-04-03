@@ -19,13 +19,13 @@ def clear():
 
 #Event listner
 screen.listen()
-#Set 'w' key to call move_forwards function.
+#Set 'w' key to call move_forwards() function.
 screen.onkey(key="w",fun=move_forwards)
 
-#Set 's' key to call move_backwards function.
+#Set 's' key to call move_backwards() function.
 screen.onkey(key="s",fun=move_backwards)
 
-#Set 'd' key to call move_forwards function.
+#Set 'd' key to call clockwise() function.
 screen.onkey(key="d",fun=clockwise)
 
 #Set 'a' key to call move_forwards function.
