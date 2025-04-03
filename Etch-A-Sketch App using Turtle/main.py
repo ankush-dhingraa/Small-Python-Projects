@@ -2,7 +2,7 @@ from turtle import Turtle, Screen
 obj = Turtle()
 screen = Screen()
 # move_forward() is used for moving turtle forward by 10
-def move_forward():
+def move_forwards():
     obj.forward(10)
 # move_backward() is used for moving turtle forward by 10
 def move_backward():
@@ -19,5 +19,5 @@ def clear():
 
 #Event listner
 screen.listen()
-
+#Set 'w' key to call move_forwards function.
 screen.onkey(key="w",fun=move_forwards)
