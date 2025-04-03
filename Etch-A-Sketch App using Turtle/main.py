@@ -13,5 +13,6 @@ def clockwise():
 # counter_clockwise() is used for rotating turtle left by 10 degree angle
 def counter_clockwise():
     obj.left(10)
+#clear() is used for Delete the turtle’s drawings from the screen. 
 def clear():
     obj.clear()
