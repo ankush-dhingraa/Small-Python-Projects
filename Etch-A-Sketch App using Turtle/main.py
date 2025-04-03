@@ -5,7 +5,7 @@ screen = Screen()
 def move_forwards():
     obj.forward(10)
 # move_backward() is used for moving turtle forward by 10
-def move_backward():
+def move_backwards():
     obj.backward(10)
 # clockwise() is used for rotating turtle right by 10 degree angle
 def clockwise():
