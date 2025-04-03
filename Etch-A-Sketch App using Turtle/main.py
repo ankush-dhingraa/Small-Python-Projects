@@ -31,7 +31,7 @@ screen.onkey(key="d",fun=clockwise)
 #Set 'a' key to call counter_clockwise() function.
 screen.onkey(key="a",fun=counter_clockwise)
 
-#Set 'c' key to call move_forwards function.
+#Set 'c' key to call clear() function.
 screen.onkey(key="c",fun=clear)
 
 screen.exitonclick()
