@@ -10,3 +10,5 @@ def move_backward():
 # clockwise() is used for rotating turtle right by 10 degree angle
 def clockwise():
     obj.right(10)
+def counter_clockwise():
+    obj.left(10)
