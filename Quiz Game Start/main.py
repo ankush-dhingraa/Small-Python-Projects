@@ -9,5 +9,7 @@ for q_data in question_data:
     new_question_b = Question(question_text,question_answer)
     question_bank.append(new_question_b)
 
+test = Quiz_brain(question_bank)
+test.next_question()
 # print(question_bank[0].text)
 # print(question_bank[0].answer)
