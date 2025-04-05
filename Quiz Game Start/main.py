@@ -10,6 +10,7 @@ for q_data in question_data:
     question_bank.append(new_question_b)
 
 test = Quiz_brain(question_bank)
-test.next_question()
 # print(question_bank[0].text)
 # print(question_bank[0].answer)
+while test.stil_has_questions:
+    test.next_question()
