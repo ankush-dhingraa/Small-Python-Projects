@@ -9,9 +9,5 @@ class Quiz_brain:
         user = input(f"Q.{self.question_no} : {current_question.text}. (True/False)? :")
     
     def stil_has_questions(self):
-        total_quiz_questions = len(self.question_list)
-        if (self.question_no >= total_quiz_questions):
-            return False
-        else:
-            return True
+        return self.question_no < len(self.question_list)
         
