@@ -12,5 +12,5 @@ for q_data in question_data:
 test = Quiz_brain(question_bank)
 # print(question_bank[0].text)
 # print(question_bank[0].answer)
-while test.stil_has_questions:
+while test.stil_has_questions():
     test.next_question()
