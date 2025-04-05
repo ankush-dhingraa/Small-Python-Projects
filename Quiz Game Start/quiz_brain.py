@@ -12,6 +12,6 @@ class Quiz_brain:
         return self.question_no < len(self.question_list)
     def check_answer(self,user_aswer,correct_answer):
         if user_aswer.lower() == correct_answer.lower():
-            print("You got it Right!")
+            print("You got it right!")
         else:
             print("That's wrong")
