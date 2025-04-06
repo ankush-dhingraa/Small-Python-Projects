@@ -1,3 +1,3 @@
-from turtle import Turtle
+from turtle import Turtle, Screen
 
 obj = Turtle()
