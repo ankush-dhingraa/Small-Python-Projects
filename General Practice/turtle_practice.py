@@ -1,3 +1,3 @@
 from turtle import Turtle
 
-obj
+obj = Turtle()
