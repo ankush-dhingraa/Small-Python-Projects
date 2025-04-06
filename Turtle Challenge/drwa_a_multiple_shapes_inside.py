@@ -7,5 +7,6 @@ for _ in range(10):
         shape.forward(50)
         shape.right(angle/sides)
     sides+=1
+
 screen = Screen()
 screen.exitonclick()
