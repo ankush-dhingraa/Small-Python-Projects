@@ -1,2 +1,4 @@
 from turtle import Turtle, Screen
-shape = Turtle
+shape = Turtle()
+screen = Screen()
+screen.exitonclick()
