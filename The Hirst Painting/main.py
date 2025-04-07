@@ -21,6 +21,7 @@ color_list = [(245, 243, 238), (246, 242, 244), (202, 164, 110), (240, 245, 241)
 turtle.colormode(255)
 obj = Turtle()
 obj.penup()
+obj.hideturtle()
 
 obj.setheading(225)
 obj.forward(300)
