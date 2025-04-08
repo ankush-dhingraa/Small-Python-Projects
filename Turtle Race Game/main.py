@@ -32,5 +32,5 @@ def race_winner(turtle_color):
     if user_bet == turtle_color:
         print("you win")
     else:
-        print(you lose)
+        print("you lose")
 screen.exitonclick()
