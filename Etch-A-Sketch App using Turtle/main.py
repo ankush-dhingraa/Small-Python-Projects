@@ -11,9 +11,10 @@ def move_backwards():
 def turn_right():
     new_heading = obj.heading()+10
     obj.setheading(new_heading)
-# counter_clockwise() is used for rotating turtle left by 10 degree angle
-def turn_():
-    obj.left(10)
+# turn_left() is used for rotating turtle left by 10 degree angle
+def turn_left():
+    new_heading = obj.heading()-10
+    obj.setheading(new_heading)
 #clear() is used for Delete the turtle’s drawings from the screen. 
 def clear():
     obj.clear()
