@@ -31,7 +31,22 @@ screen.onkey(key="s",fun=l_paddle.down)
 
 game_is_on = True
 while game_is_on:
-    # time.sleep(0.1)
+    time.sleep(0.01)
     screen.update()
     ball.move()
+
+    #top and bottom wall collition detection
+    if ball.ycor() > 280 or ball.ycor() < -280:
+        print("need bounce")
+        ball.bounce_y()
+    
+    # detect collition with paddle
+    if ball.distance(r_paddle) < 50 and ball.xcor() > 330 or ball.distance(l_paddle) < 50 and ball.xcor() < -330:
+        ball.bounce_x()
+    #detect R paddle missing
+    if ball.xcor() > 380:
+        ball.reset_position()
+    #detect l paddle missing
+    if ball.xcor() < -380:
+        ball.reset_position()
 screen.exitonclick()
