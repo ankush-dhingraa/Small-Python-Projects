@@ -22,4 +22,3 @@ def write_letter(name):
 
 for name in name_list:
     write_letter(name)
-print(name_list)
