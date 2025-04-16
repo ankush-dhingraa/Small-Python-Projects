@@ -13,7 +13,7 @@ with open(r"Mail Merge Project\mail_Input\Letters\starting_letter.txt") as lette
 #create function to write new letters 
 def write_letter(name):
     letter = letter_list.copy()
-    letter[0] = letter[0].replace('[name]',name)
+    letter[0] = letter[0].replace('[Name]',name)
     print(letter)
     new_letter_path = r"Mail Merge Project\mail_Output\ReadyToSend\letter_for_{0}".format(name)
     with open(new_letter_path,"w") as new_letter:
