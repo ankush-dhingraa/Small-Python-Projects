@@ -23,3 +23,6 @@ print(f"Average per day temperature is {round(sum(temperature_list)/len(temperat
 #method 2
 print(f"Average per day temperature is {data["temp"].mean()}")
 print(f"Maximum temperature is : {data['temp'].max()}")
+
+#get column data
+print(data["condition"])
