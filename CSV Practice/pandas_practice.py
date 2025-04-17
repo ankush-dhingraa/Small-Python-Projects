@@ -26,3 +26,5 @@ print(f"Maximum temperature is : {data['temp'].max()}")
 
 #get column data
 print(data["condition"])
+#this is also valid
+print(data.condition)
