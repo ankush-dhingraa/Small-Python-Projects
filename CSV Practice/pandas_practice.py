@@ -39,3 +39,13 @@ print("\nMonday Condition\n")
 print(monday.condition)
 print("\nMonday temperature\n")
 print((monday.temp*9/5)+32) # also use *1.8 instead (9/5 )
+
+#create a dataFrame from scratch
+data_dict = {
+    'students' : ['Ankush','Saksham','Armaan'],
+    'marks' : [29,25,17]
+}
+data_d = pandas.DataFrame(data_dict)
+print(data_d)
+csv = data_d.to_csv()
+print(csv)
