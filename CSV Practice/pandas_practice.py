@@ -38,4 +38,4 @@ monday = data[data.day == 'Monday']
 print("\nMonday Condition\n")
 print(monday.condition)
 print("\nMonday temperature\n")
-print((monday.temp*9/5)+32) # also use *1.8 instead 9/5
+print((monday.temp*9/5)+32) # also use *1.8 instead (9/5 )
