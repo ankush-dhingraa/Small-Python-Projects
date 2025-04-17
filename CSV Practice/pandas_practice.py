@@ -47,5 +47,4 @@ data_dict = {
 }
 data_d = pandas.DataFrame(data_dict)
 print(data_d)
-csv = data_d.to_csv()
-print(csv)
+csv = data_d.to_csv("CSV Practice\student marks.csv")
