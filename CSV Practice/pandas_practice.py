@@ -1,6 +1,6 @@
 import pandas
 #data object
-data = pandas.read_csv("CSV Practice\weather_data.csv")
+data = pandas.read_csv("weather_data.csv")
 #display all csv data
 # print(data)
 
@@ -47,4 +47,4 @@ data_dict = {
 }
 data_d = pandas.DataFrame(data_dict)
 print(data_d)
-csv = data_d.to_csv("CSV Practice\student marks.csv")
+csv = data_d.to_csv("student marks.csv")
