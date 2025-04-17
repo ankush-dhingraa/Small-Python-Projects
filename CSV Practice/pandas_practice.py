@@ -24,12 +24,18 @@ print(f"Average per day temperature is {round(sum(temperature_list)/len(temperat
 print(f"Average per day temperature is {data["temp"].mean()}")
 print(f"Maximum temperature is : {data['temp'].max()}")
 
-#get data in column
+#get data in column ( Dictionary-style access,Returns a Series (single column).)
 print(data["condition"])
-#this is also valid (attribute)
+#this is also valid (Attribute-style access,Returns a Series (single column).)
 print(data.condition)
-
 #get data in row
 print(data[data.temp == data.temp.max()])
 #also can use this 
 print(data[data["temp"] == data['temp'].max()])
+
+#particular row and column
+monday = data[data.day == 'Monday']
+print("\nMonday Condition\n")
+print(monday.condition)
+print("\nMonday temperature\n")
+print((monday.temp*9/5)+32) # also use *1.8 instead 9/5
