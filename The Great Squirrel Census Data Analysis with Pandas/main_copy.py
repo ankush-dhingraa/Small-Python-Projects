@@ -5,4 +5,6 @@ unique_color = data['Primary Fur Color'].unique()
 count_dict = {}
 for color in unique_color[1:]:
     count_dict[color] = data[data['Primary Fur Color']==color].shape[0]
+new_data = pandas.DataFrame(list(count_dict.items()),columns=["Colour","Total"])
+
 # print(count_dict)
