@@ -3,7 +3,7 @@ import turtle
 from update_district import update
 import pandas
 data = pandas.read_csv(r'Haryana Districts Game\22_districts.csv')
-total
+total_districts = 22
 obj = Turtle()
 # update = Update_district()
 screen = Screen()
