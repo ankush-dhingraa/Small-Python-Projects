@@ -1,5 +1,4 @@
 from turtle import Turtle
-
 t = Turtle()
 t.hideturtle()
 t.penup()
