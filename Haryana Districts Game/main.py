@@ -12,14 +12,14 @@ screen.screensize(300,300)
 screen.bgpic(r"Haryana Districts Game\haryana.gif")
 obj.penup()
 obj.hideturtle()
-print(SCORE)
-update(16,135,"Ambala")
-print(SCORE)
-update(-46,-2,'Jind')
-print(SCORE)
-# row = list(data[data['District Name']=='Yamunanagar'])
-print(data.loc[1]['X'])
-print(user_input)
+# print(SCORE)
+# update(16,135,"Ambala")
+# print(SCORE)
+# update(-46,-2,'Jind')
+# print(SCORE)
+# # row = list(data[data['District Name']=='Yamunanagar'])
+# print(data.loc[1]['X'])
+# print(user_input)
 # print(row)
 def check(user_input):
     global game_is_on, SCORE
@@ -30,6 +30,8 @@ def check(user_input):
             display = data.loc[index]['District Name']
             update(x=x,y=y,display=display)
             SCORE +=1
+        elif SCORE ==22:
+            game_is_on = False
         elif user_input.lower() == 'exit':
             game_is_on = False
 
@@ -37,6 +39,8 @@ game_is_on = True
 while game_is_on:
     user_input = turtle.textinput(f"Guess ? {SCORE}/{total_districts}","Guess the Districts name of haryana")
     check(user_input)
+else:
+    screen.bye()
 
 
 

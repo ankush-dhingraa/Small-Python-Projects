@@ -6,4 +6,4 @@ t.color('black')
 
 def update(x,y,display):
     t.goto(x,y)
-    t.write(display,align="center", font=("courier",15,"normal"))
+    t.write(display,align="center", font=("Arial",6,"normal"))
