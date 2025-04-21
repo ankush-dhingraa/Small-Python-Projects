@@ -1,23 +1,23 @@
 District Name,X,Y
 Ambala,16,135
-Bhiwani,,
-Charkhi Dadri,,
-Faridabad,,
+Bhiwani,-135,-85
+Charkhi Dadri,-110,-125
+Faridabad,60,-145
 Fatehabad,-145,30
-Gurugram,,
+Gurugram,10,-145
 Hisar,-136,-25
-Jhajjar,,
+Jhajjar,-20,-115
 Jind,-46,-2
 Kaithal,-45,60
 Karnal,15,50
 Kurukshetra,0,100
-Mahendragarh,,
-Nuh,,
-Palwal,,
+Mahendragarh,-100,-160
+Nuh,30,-200
+Palwal,70,-195
 Panchkula,25,190
 Panipat,0,-2
-Rewari,,
-Rohtak,,
+Rewari,-43,-160
+Rohtak,-35,-65
 Sirsa,-245,30
-Sonipat,,
+Sonipat,0,-40
 Yamunanagar,70,130
