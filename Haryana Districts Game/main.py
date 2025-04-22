@@ -1,5 +1,6 @@
 from turtle import Turtle,Screen,turtles
 import turtle
+import tkinter as tk
 from score import update
 import pandas
 data = pandas.read_csv(r'Haryana Districts Game\22_districts.csv')
@@ -24,12 +25,15 @@ obj.hideturtle()
 # print(row)
 def check(user_input):
     global game_is_on, SCORE
+    
     for index in range(0,22):
         if user_input.lower() == data.loc[index]['District Name'].lower():
             x = data.loc[index]['X']
             y = data.loc[index]['Y']
             display = data.loc[index]['District Name']
+
             update(x=x,y=y,display=display)
+
             if user_input.lower() in user_guessed_districts:
                 continue
             else:
@@ -43,19 +47,16 @@ def check(user_input):
             game_is_on = False
 
 def show_win_popup():
-    # Create a new Tkinter window
     win_popup = tk.Tk()
     win_popup.title("Congratulations!")
+    win_popup.geometry("400x150")
     
-    # Create a label with the winning message
     label = tk.Label(win_popup, text="You Win!", font=("Arial", 24))
     label.pack(pady=20)
-    
-    # Create a button to close the popup
+
     button = tk.Button(win_popup, text="Close", command=win_popup.destroy)
     button.pack(pady=10)
-    
-    # Start the Tkinter event loop
+
     win_popup.mainloop()
 
 
@@ -75,6 +76,7 @@ else:
         # win.write("You Win This",align="center",font=("Arial",30,"bold"))
         # win_screen.bgcolor("black")
         # win_screen.exitonclick()
+        show_win_popup()
 
 
 
