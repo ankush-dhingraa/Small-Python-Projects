@@ -3,10 +3,21 @@ import turtle
 import tkinter as tk
 from score import update
 import pandas
+import pygame
+import pygame
+
+# Initialize pygame mixer
+pygame.mixer.init()
+
+# Load and play music
+pygame.mixer.music.load(r"Haryana Districts Game\arcade-heartbeat.mp3")
+pygame.mixer.music.play(-1)  # -1 makes the music loop indefinitely
+
 data = pandas.read_csv(r'Haryana Districts Game\22_districts.csv')
 total_districts = 22
 SCORE = 0
 user_guessed_districts = []
+
 obj = Turtle()
 screen = Screen()
 screen.screensize(300,300)
