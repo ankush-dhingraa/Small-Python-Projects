@@ -37,7 +37,7 @@ def check(user_input):
 
 game_is_on = True
 while game_is_on:
-    user_input = turtle.textinput(f"Guess ? {SCORE}/{total_districts}","Guess the Districts name of haryana")
+    user_input = turtle.textinput(f"{SCORE}/{total_districts} Districts Correct","Guess the Districts name of haryana")
     check(user_input)
 else:
     screen.bye()
