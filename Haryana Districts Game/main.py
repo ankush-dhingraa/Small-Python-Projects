@@ -4,7 +4,7 @@ from score import update
 import pandas
 data = pandas.read_csv(r'Haryana Districts Game\22_districts.csv')
 total_districts = 22
-SCORE = 0
+SCORE = 21
 user_guessed_districts = []
 obj = Turtle()
 # update = Update_district()
@@ -36,7 +36,7 @@ def check(user_input):
                 SCORE +=1
             user_guessed_districts.append(user_input.lower())
 
-            if SCORE ==22:
+            if SCORE == 22:
                 game_is_on = False
         
         elif user_input.lower() == 'exit':
@@ -47,7 +47,6 @@ game_is_on = True
 while game_is_on:
     user_input = turtle.textinput(f"{SCORE}/{total_districts} Districts Correct","What's another district name?")
     check(user_input)
-    if SCORE
 else:
     screen.bye()
 
