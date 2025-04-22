@@ -30,9 +30,11 @@ def check(user_input):
             y = data.loc[index]['Y']
             display = data.loc[index]['District Name']
             update(x=x,y=y,display=display)
-            user_guessed_districts.append(user_input.lower())
-            if user_input.lower() not in user_guessed_districts:
+            if user_input.lower() in user_guessed_districts:
+                continue
+            else:
                 SCORE +=1
+            user_guessed_districts.append(user_input.lower())
         elif SCORE ==22:
             game_is_on = False
         elif user_input.lower() == 'exit':
