@@ -35,8 +35,10 @@ def check(user_input):
             else:
                 SCORE +=1
             user_guessed_districts.append(user_input.lower())
-        elif SCORE ==22:
-            game_is_on = False
+            
+            if SCORE ==22:
+                game_is_on = False
+        
         elif user_input.lower() == 'exit':
             game_is_on = False
 
@@ -44,6 +46,7 @@ game_is_on = True
 while game_is_on:
     user_input = turtle.textinput(f"{SCORE}/{total_districts} Districts Correct","What's another district name?")
     check(user_input)
+    if SCORE
 else:
     screen.bye()
 
