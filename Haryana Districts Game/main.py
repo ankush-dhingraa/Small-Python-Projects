@@ -5,6 +5,7 @@ import pandas
 data = pandas.read_csv(r'Haryana Districts Game\22_districts.csv')
 total_districts = 22
 SCORE = 0
+user_guessed_districts = []
 obj = Turtle()
 # update = Update_district()
 screen = Screen()
@@ -29,7 +30,9 @@ def check(user_input):
             y = data.loc[index]['Y']
             display = data.loc[index]['District Name']
             update(x=x,y=y,display=display)
-            SCORE +=1
+            user_guessed_districts.append(user_input.lower())
+            if user_input.lower() not in user_guessed_districts:
+                SCORE +=1
         elif SCORE ==22:
             game_is_on = False
         elif user_input.lower() == 'exit':
