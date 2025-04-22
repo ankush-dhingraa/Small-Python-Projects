@@ -42,6 +42,23 @@ def check(user_input):
         elif user_input.lower() == 'exit':
             game_is_on = False
 
+def show_win_popup():
+    # Create a new Tkinter window
+    win_popup = tk.Tk()
+    win_popup.title("Congratulations!")
+    
+    # Create a label with the winning message
+    label = tk.Label(win_popup, text="You Win!", font=("Arial", 24))
+    label.pack(pady=20)
+    
+    # Create a button to close the popup
+    button = tk.Button(win_popup, text="Close", command=win_popup.destroy)
+    button.pack(pady=10)
+    
+    # Start the Tkinter event loop
+    win_popup.mainloop()
+
+
 game_is_on = True
 #start
 while game_is_on:
@@ -49,6 +66,15 @@ while game_is_on:
     check(user_input)
 else:
     screen.bye()
+    if SCORE == 22:
+        # win = Turtle()
+        # win_screen = Screen()
+        # win.hideturtle()
+        # win.penup()
+        # win.color("yellow")
+        # win.write("You Win This",align="center",font=("Arial",30,"bold"))
+        # win_screen.bgcolor("black")
+        # win_screen.exitonclick()
 
 
 
