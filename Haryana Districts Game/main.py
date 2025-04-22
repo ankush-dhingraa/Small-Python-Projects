@@ -5,7 +5,7 @@ from score import update
 import pandas
 data = pandas.read_csv(r'Haryana Districts Game\22_districts.csv')
 total_districts = 22
-SCORE = 21
+SCORE = 0
 user_guessed_districts = []
 obj = Turtle()
 screen = Screen()
