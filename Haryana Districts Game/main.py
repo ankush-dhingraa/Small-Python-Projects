@@ -47,7 +47,7 @@ def check(user_input):
         
         elif user_input.lower() == 'exit':
             game_is_on = False
-
+#funtion if user win
 def show_win_popup():
     win_popup = tk.Tk()
     win_popup.title("Congratulations!")
