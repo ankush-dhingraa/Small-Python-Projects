@@ -29,6 +29,7 @@ screen.bgpic(r"Haryana Districts Game\haryana.gif")
 obj.penup()
 obj.hideturtle()
 
+#checking user input 
 def check(user_input):
     global game_is_on, SCORE
 
