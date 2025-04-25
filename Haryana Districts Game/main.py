@@ -15,10 +15,11 @@ pygame.mixer.music.play(-1)  # -1 makes the music loop indefinitely
 
 #fetching data from haryana districts
 data = pandas.read_csv(r'Haryana Districts Game\22_districts.csv')
+
 total_districts = 22
 SCORE = 0
 user_guessed_districts = []
-
+#Turtle object
 obj = Turtle()
 screen = Screen()
 screen.screensize(300,300)
