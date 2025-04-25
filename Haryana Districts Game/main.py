@@ -68,6 +68,7 @@ while game_is_on:
     user_input = turtle.textinput(f"{SCORE}/{total_districts} Districts Correct","What's another district name?")
     check(user_input)
 else:
+    #destroy screen
     screen.bye()
     if SCORE == 22:
         show_win_popup()
