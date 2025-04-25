@@ -13,6 +13,7 @@ pygame.mixer.init()
 pygame.mixer.music.load(r"Haryana Districts Game\arcade-heartbeat.mp3")
 pygame.mixer.music.play(-1)  # -1 makes the music loop indefinitely
 
+#fetching data from haryana districts
 data = pandas.read_csv(r'Haryana Districts Game\22_districts.csv')
 total_districts = 22
 SCORE = 0
