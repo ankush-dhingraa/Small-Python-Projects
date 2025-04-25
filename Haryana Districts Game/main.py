@@ -21,6 +21,7 @@ SCORE = 0
 user_guessed_districts = []
 #Turtle object
 obj = Turtle()
+#turtle screen
 screen = Screen()
 screen.screensize(300,300)
 screen.bgpic(r"Haryana Districts Game\haryana.gif")
