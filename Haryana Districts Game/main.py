@@ -24,6 +24,7 @@ obj = Turtle()
 #turtle screen
 screen = Screen()
 screen.screensize(300,300)
+#backgroung haryana map
 screen.bgpic(r"Haryana Districts Game\haryana.gif")
 obj.penup()
 obj.hideturtle()
