@@ -15,7 +15,10 @@ def insert(table,value,columns):
 
 cursor = conn.cursor()
 # cursor.execute(insert("student_details",columns=(name,'phone','class'),value=))
-cursor.execute("INSERT INTO student_details (name,phone,class) VALUES ('daksh',2589631475,'BCA')")
-conn.commit()
+# cursor.execute("INSERT INTO student_details (name,phone,class) VALUES ('jatin',2589631445,'MEDICAL')")
+# conn.commit()
+cursor.execute("select * from student_details where class = 'MEDICAL'")
+for data in cursor.fetchall():
+    print(data)
 conn.close()
 
