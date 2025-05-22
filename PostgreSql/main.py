@@ -15,9 +15,9 @@ def insert(table,value,columns):
 
 cursor = conn.cursor()
 # cursor.execute(insert("student_details",columns=(name,'phone','class'),value=))
-# cursor.execute("INSERT INTO student_details (name,phone,class) VALUES ('jatin',2589631445,'MEDICAL')")
-# conn.commit()
-cursor.execute("select * from student_details where class = 'MEDICAL'")
+cursor.execute("INSERT INTO student_details (name,phone,class) VALUES ('ANUJ',2589631235,'LAW')")
+conn.commit()
+cursor.execute("select * from student_details")
 for data in cursor.fetchall():
     print(data)
 conn.close()
