@@ -32,15 +32,16 @@ email_username_input = Entry(width=50)
 email_username_input.grid(column=1,row=2,columnspan=2)
 
 
-password_input = Entry(width=50)
-password_input.grid(column=1,row=3,columnspan=2)
+password_input = Entry(width=25)
+password_input.grid(column=1,row=3)
 
 #buttons
 
-add_button = Button(text="Add",width=50,command="")
-add_button.grid
+add_button = Button(text="Add",width=42,command="")
+add_button.grid(column=1,row=4,columnspan=2)
 
 generate_button = Button(text="Generate",width=20,command="")
+generate_button.grid(column=2,row=3)
 
 
 
