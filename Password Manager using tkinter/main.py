@@ -5,10 +5,15 @@ import sqlite3
 conn = sqlite3.connect(r"Password Manager using tkinter\sqlite.db")
 cursor = conn.cursor()
 cursor.execute("CREATE TABLE IF NOT EXISTS passwords (id INTEGER PRIMARY KEY AUTOINCREMENT,website varchar(250),email_user varchar(250),password varchar(250))")
-def save_data(website,email_user,password):
+def save_data():
+    website = website_input.get()
+    email_user = email_username_input.get()
+    password = password_input.get()
     query = f"INSERT INTO passwords (website,email_user,password) values (\"{website}\",\"{email_user}\",\"{password}\")"
     cursor.execute(query)
     conn.commit()
+    website_input.delete(0,END)
+    password_input.delete(0,END)
 # save_data("google.com","anku","1235ddd3424@$@#$@")
 cursor.execute("select * from passwords")
 
@@ -41,6 +46,7 @@ website_input.grid(column=1,row=1,columnspan=2)
 
 email_username_input = Entry(width=50)
 email_username_input.grid(column=1,row=2,columnspan=2)
+email_username_input.insert(0,"ankushkumar20024@gmail.com")
 
 
 password_input = Entry(width=37)
