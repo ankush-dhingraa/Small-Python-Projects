@@ -1,7 +1,18 @@
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
 
 # ---------------------------- SAVE PASSWORD ------------------------------- #
+import sqlite3
+conn = sqlite3.connect(r"Password Manager using tkinter\sqlite.db")
+cursor = conn.cursor()
+cursor.execute("CREATE TABLE IF NOT EXISTS passwords (id INTEGER PRIMARY KEY AUTOINCREMENT,website varchar(250),email_user varchar(250),password varchar(250))")
+def save_data(website,email_user,password):
+    query = f"INSERT INTO passwords (website,email_user,password) values (\"{website}\",\"{email_user}\",\"{password}\")"
+    cursor.execute(query)
+    conn.commit()
+# save_data("google.com","anku","1235ddd3424@$@#$@")
+cursor.execute("select * from passwords")
 
+print(cursor.fetchall())
 # ---------------------------- UI SETUP ------------------------------- #
 from tkinter import *
 window = Tk()
@@ -32,7 +43,7 @@ email_username_input = Entry(width=50)
 email_username_input.grid(column=1,row=2,columnspan=2)
 
 
-password_input = Entry(width=25)
+password_input = Entry(width=37)
 password_input.grid(column=1,row=3)
 
 #buttons
@@ -40,7 +51,7 @@ password_input.grid(column=1,row=3)
 add_button = Button(text="Add",width=42,command="")
 add_button.grid(column=1,row=4,columnspan=2)
 
-generate_button = Button(text="Generate",width=20,command="")
+generate_button = Button(text="Generate",command="",padx=10)
 generate_button.grid(column=2,row=3)
 
 
