@@ -10,18 +10,24 @@ def save_data():
     website = website_input.get()
     email_user = email_username_input.get()
     password = password_input.get()
-    
-    is_ok = messagebox.askokcancel(title="website",message=f"These are the detailes enterd: \nemail/username : {email_user}\npassword : {password}\n is it okay to save?")
-    if is_ok:
-        query = f"INSERT INTO passwords (website,email_user,password) values (\"{website}\",\"{email_user}\",\"{password}\")"
-        cursor.execute(query)
-        conn.commit()
-        website_input.delete(0,END)
-        password_input.delete(0,END)
-# save_data("google.com","anku","1235ddd3424@$@#$@")
-        cursor.execute("select * from passwords")
+    if not website.strip():
+        messagebox.askretrycancel(title="Empty Website Field",message="Please enter a website to continue.")
+    elif not email_user.strip():
+        messagebox.askretrycancel(title="Empty Email/username Field",message="Please enter a Emial/username to continue.")
+    elif not password.strip():
+        messagebox.askretrycancel(title="Empty password Field",message="Please enter a password to continue.")
+    else:
+        is_ok = messagebox.askokcancel(title="website",message=f"These are the detailes enterd: \nemail/username : {email_user}\npassword : {password}\n is it okay to save?")
+        if is_ok:
+            query = f"INSERT INTO passwords (website,email_user,password) values (\"{website}\",\"{email_user}\",\"{password}\")"
+            cursor.execute(query)
+            conn.commit()
+            website_input.delete(0,END)
+            password_input.delete(0,END)
+    # save_data("google.com","anku","1235ddd3424@$@#$@")
+            cursor.execute("select * from passwords")
 
-        print(cursor.fetchall())
+            print(cursor.fetchall())
 # ---------------------------- UI SETUP ------------------------------- #
 from tkinter import *
 window = Tk()
