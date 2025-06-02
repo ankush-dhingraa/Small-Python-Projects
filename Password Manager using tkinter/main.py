@@ -1,6 +1,12 @@
 from tkinter import messagebox
+from password_generator import create_password
+import pyperclip
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
-
+def password_generate():
+    password = create_password()
+    password_input.delete(0,END)
+    password_input.insert(0,password)
+    pyperclip.copy(password)
 # ---------------------------- SAVE PASSWORD ------------------------------- #
 import sqlite3
 conn = sqlite3.connect(r"Password Manager using tkinter\sqlite.db")
@@ -24,10 +30,6 @@ def save_data():
             conn.commit()
             website_input.delete(0,END)
             password_input.delete(0,END)
-    # save_data("google.com","anku","1235ddd3424@$@#$@")
-            cursor.execute("select * from passwords")
-
-            print(cursor.fetchall())
 # ---------------------------- UI SETUP ------------------------------- #
 from tkinter import *
 window = Tk()
@@ -67,7 +69,7 @@ password_input.grid(column=1,row=3)
 add_button = Button(text="Add",width=42,command=save_data)
 add_button.grid(column=1,row=4,columnspan=2)
 
-generate_button = Button(text="Generate",command="",padx=10)
+generate_button = Button(text="Generate",command=password_generate,padx=10)
 generate_button.grid(column=2,row=3)
 
 
