@@ -22,6 +22,13 @@ email_username_label = Label(text="Email\\Username: ")
 password_label = Label(text="Password: ")
 
 #entry input 
+website_input = Entry(width=50)
+website_input.grid(column=1,row=1)
+
+email_username_input = Entry(width=50)
+
+
+password_input = Entry(width=50)
 
 
 
