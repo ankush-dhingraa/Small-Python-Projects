@@ -1,3 +1,4 @@
+from tkinter import messagebox
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
 
 # ---------------------------- SAVE PASSWORD ------------------------------- #
@@ -9,15 +10,18 @@ def save_data():
     website = website_input.get()
     email_user = email_username_input.get()
     password = password_input.get()
-    query = f"INSERT INTO passwords (website,email_user,password) values (\"{website}\",\"{email_user}\",\"{password}\")"
-    cursor.execute(query)
-    conn.commit()
-    website_input.delete(0,END)
-    password_input.delete(0,END)
+    
+    is_ok = messagebox.askokcancel(title="website",message=f"These are the detailes enterd: \nemail/username : {email_user}\npassword : {password}\n is it okay to save?")
+    if is_ok:
+        query = f"INSERT INTO passwords (website,email_user,password) values (\"{website}\",\"{email_user}\",\"{password}\")"
+        cursor.execute(query)
+        conn.commit()
+        website_input.delete(0,END)
+        password_input.delete(0,END)
 # save_data("google.com","anku","1235ddd3424@$@#$@")
-cursor.execute("select * from passwords")
+        cursor.execute("select * from passwords")
 
-print(cursor.fetchall())
+        print(cursor.fetchall())
 # ---------------------------- UI SETUP ------------------------------- #
 from tkinter import *
 window = Tk()
@@ -54,12 +58,11 @@ password_input.grid(column=1,row=3)
 
 #buttons
 
-add_button = Button(text="Add",width=42,command="")
+add_button = Button(text="Add",width=42,command=save_data)
 add_button.grid(column=1,row=4,columnspan=2)
 
 generate_button = Button(text="Generate",command="",padx=10)
 generate_button.grid(column=2,row=3)
-
 
 
 
