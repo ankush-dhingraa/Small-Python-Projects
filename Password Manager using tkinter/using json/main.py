@@ -28,11 +28,18 @@ def save_data():
     else:
         is_ok = messagebox.askokcancel(title="website",message=f"These are the detailes enterd: \nemail/username : {email_user}\npassword : {password}\n is it okay to save?")
         if is_ok:
-            with open("Password Manager using tkinter\using json\data.json","r") as file:
-                data = json.loads(file)
-                data.update(new_data)
-            with open("Password Manager using tkinter\using json\data.json","w") as file:
-                json.dump(data,file,indent=4)
+            try:
+                with open(r"Password Manager using tkinter\using json\data.json","r") as file:
+                    data = json.load(file)
+                    data.update(new_data)
+            except FileNotFoundError:
+                with open(r"Password Manager using tkinter\using json\data.json","w") as file:
+                    json.dump(new_data,file,indent=4)
+                    website_input.delete(0,END)
+                    password_input.delete(0,END)
+            else:
+                with open(r"Password Manager using tkinter\using json\data.json","w") as file:
+                    json.dump(data,file,indent=4)
             website_input.delete(0,END)
             password_input.delete(0,END)
 # ---------------------------- UI SETUP ------------------------------- #
