@@ -23,7 +23,6 @@ def save_data():
     if len(website) ==0 or len(password) ==0:
         messagebox.askretrycancel(title="Opps",message="Please make sure you haven't left any field empty.")
     else:
-
         try:
             with open(r"Password Manager using tkinter\using json\data.json","r") as file:
                 data = json.load(file)
@@ -31,13 +30,26 @@ def save_data():
         except FileNotFoundError:
             with open(r"Password Manager using tkinter\using json\data.json","w") as file:
                 json.dump(new_data,file,indent=4)
-                website_input.delete(0,END)
-                password_input.delete(0,END)
         else:
             with open(r"Password Manager using tkinter\using json\data.json","w") as file:
                 json.dump(data,file,indent=4)
-        website_input.delete(0,END)
-        password_input.delete(0,END)
+        finally:
+            website_input.delete(0,END)
+            password_input.delete(0,END)
+# ---------------------------- SEARCH ------------------------------- #
+def search():
+    website = website_input.get()
+    try:
+        with open(r"Password Manager using tkinter\using json\data.json","r") as file:
+            data = json.load(file) 
+            email_username = data[website]["email"]
+            password = data[website]["password"]
+            messagebox.showinfo(title=website,message=f"Email/username : {email_username} \nPassword : {password}")     
+    except FileNotFoundError:
+        messagebox.showerror(title="Error",message="No data file found")
+    except KeyError:
+        messagebox.showerror(title="Website Not Found",message=f"No details for \"{website}\" exists.")
+
 # ---------------------------- UI SETUP ------------------------------- #
 from tkinter import *
 window = Tk()
@@ -61,8 +73,8 @@ password_label = Label(text="Password: ")
 password_label.grid(column=0,row=3)
 
 #entry input 
-website_input = Entry(width=50)
-website_input.grid(column=1,row=1,columnspan=2)
+website_input = Entry(width=37)
+website_input.grid(column=1,row=1)
 
 email_username_input = Entry(width=50)
 email_username_input.grid(column=1,row=2,columnspan=2)
@@ -79,6 +91,8 @@ add_button.grid(column=1,row=4,columnspan=2)
 
 generate_button = Button(text="Generate",command=password_generate,padx=10)
 generate_button.grid(column=2,row=3)
+search_button = Button(text="Search",command=search,padx=14)
+search_button.grid(column=2,row=1)
 
 
 
