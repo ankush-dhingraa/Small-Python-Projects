@@ -19,29 +19,25 @@ def save_data():
             "password" : password
         }
     }
-    if not website.strip():
-        messagebox.askretrycancel(title="Empty Website Field",message="Please enter a website to continue.")
-    elif not email_user.strip():
-        messagebox.askretrycancel(title="Empty Email/username Field",message="Please enter a Emial/username to continue.")
-    elif not password.strip():
-        messagebox.askretrycancel(title="Empty password Field",message="Please enter a password to continue.")
+
+    if len(website) ==0 or len(password) ==0:
+        messagebox.askretrycancel(title="Opps",message="Please make sure you haven't left any field empty.")
     else:
-        is_ok = messagebox.askokcancel(title="website",message=f"These are the detailes enterd: \nemail/username : {email_user}\npassword : {password}\n is it okay to save?")
-        if is_ok:
-            try:
-                with open(r"Password Manager using tkinter\using json\data.json","r") as file:
-                    data = json.load(file)
-                    data.update(new_data)
-            except FileNotFoundError:
-                with open(r"Password Manager using tkinter\using json\data.json","w") as file:
-                    json.dump(new_data,file,indent=4)
-                    website_input.delete(0,END)
-                    password_input.delete(0,END)
-            else:
-                with open(r"Password Manager using tkinter\using json\data.json","w") as file:
-                    json.dump(data,file,indent=4)
-            website_input.delete(0,END)
-            password_input.delete(0,END)
+
+        try:
+            with open(r"Password Manager using tkinter\using json\data.json","r") as file:
+                data = json.load(file)
+                data.update(new_data)
+        except FileNotFoundError:
+            with open(r"Password Manager using tkinter\using json\data.json","w") as file:
+                json.dump(new_data,file,indent=4)
+                website_input.delete(0,END)
+                password_input.delete(0,END)
+        else:
+            with open(r"Password Manager using tkinter\using json\data.json","w") as file:
+                json.dump(data,file,indent=4)
+        website_input.delete(0,END)
+        password_input.delete(0,END)
 # ---------------------------- UI SETUP ------------------------------- #
 from tkinter import *
 window = Tk()
